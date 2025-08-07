@@ -27,3 +27,8 @@ def test_add_numbers_with_newlines():
     """Test that add method handles newlines between numbers"""
     calculator = StringCalculator()
     assert calculator.add("1\n2,3") == 6
+
+def test_add_with_custom_delimiter():
+    """Test that add method handles custom delimiters"""
+    calculator = StringCalculator()
+    assert calculator.add("//;\n1;2") == 3
