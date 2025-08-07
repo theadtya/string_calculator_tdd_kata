@@ -19,6 +19,14 @@ class StringCalculator:
             # Replace newlines with commas for backward compatibility
             numbers = numbers.replace("\n", ",")
         
-        return sum(int(num) for num in numbers.split(delimiter))
+        # Parse numbers and validate for negatives
+        number_list = [int(num) for num in numbers.split(delimiter)]
+        negative_numbers = [num for num in number_list if num < 0]
+        
+        if negative_numbers:
+            negative_str = ",".join(str(num) for num in negative_numbers)
+            raise ValueError(f"negative numbers not allowed {negative_str}")
+        
+        return sum(number_list)
     
     
