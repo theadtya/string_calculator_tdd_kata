@@ -12,3 +12,8 @@ def test_add_single_number_returns_number():
     """Test that add method returns the number for single number input"""
     calculator = StringCalculator()
     assert calculator.add("1") == 1
+
+def test_add_two_numbers_returns_sum():
+    """Test that add method returns sum for two comma-separated numbers"""
+    calculator = StringCalculator()
+    assert calculator.add("1,5") == 6
