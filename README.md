@@ -71,7 +71,7 @@ This project uses Python 3.12+ and `uv` for dependency management.
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/theadtya/string_calculator_tdd_kata
    cd string_calculator_tdd_kata
    ```
 
